@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import '../assets/css/Player.css';
 
@@ -14,21 +16,25 @@ const Player = props => {
     };
 
     return (
-        <div className="Player">
-            <div className="now-playing__img">
-                <img src={props.item.album.images[0].url} />
-            </div>
-            <div className="now-playing__side">
-                <div className="now-playing__name">{props.item.name}</div>
-                <div className="now-playing__artist">
-                    {props.item.artists[0].name}
+            <div className="Player">
+                <div className="now-playing__img">
+                    <img src={props.item.album.images[0].url} />
                 </div>
-                <div className="progress">
-                    <div className="progress__bar" style={progressBarStyles} />
+                <div className="now-playing__side">
+                    <div className="now-playing__name">{props.item.name}</div>
+                    <div className="now-playing__artist">
+                        {props.item.artists[0].name}
+                    </div>
+                    <div className='play-pause'>
+                            {props.is_playing ? <FontAwesomeIcon icon={faPause} />: <FontAwesomeIcon icon={faPlay} />}
+                    </div>
+                    <div className="progress">
+                        <div className="progress__bar" style={progressBarStyles} />
+                    </div>
                 </div>
+                <div className="background" style={backgroundStyles} />{" "}
             </div>
-            <div className="background" style={backgroundStyles} />{" "}
-        </div>
+        
     )
 }
 

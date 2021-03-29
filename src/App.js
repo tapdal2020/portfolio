@@ -5,6 +5,8 @@ import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons';
 import { authEndpoint, clientId, redirectUri, scopes } from "./components/config";
 import hash from "./components/hash";
 import Player from "./components/Player";
+import Repos from "./components/Repos";
+import Bio from "./components/Bio";
 import * as $ from 'jquery';
 
 class App extends Component {
@@ -24,15 +26,14 @@ class App extends Component {
       is_playing: "Paused",
       progress_ms: 0,
       no_data: false,
+      repos: []
     };
 
     this.getCurrentlyPlaying = this.getCurrentlyPlaying.bind(this);
     this.tick = this.tick.bind(this);
   }
 
-
-
-  componentDidMount() {
+  async componentDidMount() {
     // Set token
     let _token = hash.access_token;
 
@@ -46,7 +47,17 @@ class App extends Component {
 
     // set interval for polling every 5 seconds
     this.interval = setInterval(() => this.tick(), 5000);
+
+    const res = await fetch('https://api.github.com/users/tapdal2020/repos');
+    const data = await res.json();
+    const repos = [];
+    for(var i = 0; i < data.length; i++){
+      repos.push(data[i].html_url);
+    }
+    this.setState({repos: repos});
   }
+  
+    
 
   componentWillUnmount() {
     // clear the interval to save resources
@@ -99,14 +110,19 @@ class App extends Component {
       </div>
       <div className="App">
         <div className="sidebar">
-          {!this.state.token && (<a
+          <div className='spotify'>
+          {this.state.token ? <div></div> : <h3 class='kick-back'>Kick back and listen to some music!</h3>}
+          {!this.state.token && (<div className='login-btn'><a
               className="login"
               href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
                 "%20"
               )}&response_type=token&show_dialog=true`}
             >
+              
               <FontAwesomeIcon className='icon' icon={faSpotify}/> Login to Spotify
-            </a> )}
+            </a> </div>
+            )}
+            
           {this.state.token && !this.state.no_data && (
             <Player
               item={this.state.item}
@@ -119,9 +135,11 @@ class App extends Component {
               You need to be playing a song on Spotify, for something to appear here.
             </p>
           )}
+          </div>
+          <Repos repos={this.state.repos}/>
         </div>
         <div className='main'>
-          <p>this is the main</p>
+          <Bio />
         </div>
       </div>
     </Fragment>
