@@ -1,0 +1,54 @@
+/** Now Playing **/
+
+.Player {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  background-color: rgba(66, 66, 66, 0.3);
+  padding: 30px;
+  align-items: center;
+  justify-content: left;
+  border-radius: 5px;
+}
+
+.now-playing__name {
+  font-size: 1.2em;
+  margin-bottom: 0.2em;
+}
+
+.now-playing__artist {
+  margin-bottom: 1.5em;
+}
+
+.now-playing__img {
+  width: 25%;
+}
+
+.now-playing__img img {
+  max-width: 80vmin;
+  width: 100%;
+}
+
+.now-playing__side {
+  margin-left: 15%;
+  width: 45%;
+  height: fit-content;
+}
+
+/** Progress **/
+
+.progress {
+  border: 1px solid #012;
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  position: sticky;
+  bottom: 0px;
+}
+
+.progress__bar {
+  background-color: #012;
+  height: 6px;
+  position: sticky;
+  bottom: 0px;
+}
