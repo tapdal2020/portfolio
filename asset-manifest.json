@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/tapdal2020/portfolio/static/css/main.11e58830.chunk.css",
+    "main.js": "/tapdal2020/portfolio/static/js/main.cb899990.chunk.js",
+    "main.js.map": "/tapdal2020/portfolio/static/js/main.cb899990.chunk.js.map",
+    "runtime-main.js": "/tapdal2020/portfolio/static/js/runtime-main.62a0f159.js",
+    "runtime-main.js.map": "/tapdal2020/portfolio/static/js/runtime-main.62a0f159.js.map",
+    "static/js/2.0bfa2e2b.chunk.js": "/tapdal2020/portfolio/static/js/2.0bfa2e2b.chunk.js",
+    "static/js/2.0bfa2e2b.chunk.js.map": "/tapdal2020/portfolio/static/js/2.0bfa2e2b.chunk.js.map",
+    "static/js/3.f0027b4b.chunk.js": "/tapdal2020/portfolio/static/js/3.f0027b4b.chunk.js",
+    "static/js/3.f0027b4b.chunk.js.map": "/tapdal2020/portfolio/static/js/3.f0027b4b.chunk.js.map",
+    "index.html": "/tapdal2020/portfolio/index.html",
+    "static/css/main.11e58830.chunk.css.map": "/tapdal2020/portfolio/static/css/main.11e58830.chunk.css.map",
+    "static/js/2.0bfa2e2b.chunk.js.LICENSE.txt": "/tapdal2020/portfolio/static/js/2.0bfa2e2b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/tapdal2020/portfolio/static/media/RobotoMono-VariableFont_wght.2ccde177.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.62a0f159.js",
+    "static/js/2.0bfa2e2b.chunk.js",
+    "static/css/main.11e58830.chunk.css",
+    "static/js/main.cb899990.chunk.js"
+  ]
+}
