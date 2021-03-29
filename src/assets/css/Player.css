@@ -19,7 +19,7 @@
 
 .now-playing__img {
   /* object-fit: fill; */
-  width: 30%;
+  width: 20%;
 }
 
 .now-playing__img img {
@@ -28,8 +28,8 @@
 }
 
 .now-playing__side {
-  margin-left: 15%;
-  width: 45%;
+  margin-left: 5%;
+  width: 75%;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -38,7 +38,7 @@
 /** Progress **/
 
 .progress {
-  border: 1px solid #012;
+  border: 1px solid white;
   height: 6px;
   border-radius: 3px;
   overflow: hidden;
@@ -46,7 +46,7 @@
 }
 
 .progress__bar {
-  background-color: #012;
+  background-color: white;
   height: 6px;
   height: 100%;
   width: 100%;

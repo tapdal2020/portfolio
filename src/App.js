@@ -3,11 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faSpotify } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons';
 import { authEndpoint, clientId, redirectUri, scopes } from "./components/config";
+import resume from './assets/files/ResumeTaylor2021.pdf';
 import hash from "./components/hash";
 import Player from "./components/Player";
 import Repos from "./components/Repos";
 import Bio from "./components/Bio";
 import * as $ from 'jquery';
+import Projects from './components/Projects';
 
 class App extends Component {
 
@@ -26,7 +28,8 @@ class App extends Component {
       is_playing: "Paused",
       progress_ms: 0,
       no_data: false,
-      repos: []
+      repos: [],
+      img: ""
     };
 
     this.getCurrentlyPlaying = this.getCurrentlyPlaying.bind(this);
@@ -54,7 +57,14 @@ class App extends Component {
     for(var i = 0; i < data.length; i++){
       repos.push(data[i].html_url);
     }
-    this.setState({repos: repos});
+
+    const response = await fetch('https://api.github.com/users/tapdal2020');
+    const user = await response.json();
+    this.setState({
+      repos: repos,
+      img: user.avatar_url,
+      loading: true
+    });
   }
   
     
@@ -105,18 +115,21 @@ class App extends Component {
         <h2>Taylor Williamson</h2>
         <a className='menu-item' href='https://github.com/tapdal2020'><FontAwesomeIcon className='icon' icon={faGithub}/>Github</a>
         <a className='menu-item' href='http://linkedin.com/in/taylor-williamson-2020'><FontAwesomeIcon className='icon' icon={faLinkedin} />LinkedIn</a>
-        <a className='menu-item' href='./assets/files/ResumeTaylor2021.pdf'><FontAwesomeIcon className='icon' icon={faFile} />Resume</a>
+        <a className='menu-item' href={resume} ><FontAwesomeIcon className='icon' icon={faFile} />Resume</a>
         <a className='menu-item' href='mailto:tawilliamson2020@gmail.com'><FontAwesomeIcon className='icon' icon={faEnvelope} />Email</a>
+      </div>
+      <div className='title'>
+          <h1>Howdy! My name is Taylor Williamson and welcome to my portfolio!</h1>
       </div>
       <div className="App">
         <div className="sidebar">
           <div className='spotify'>
-          {this.state.token ? <div></div> : <h3 class='kick-back'>Kick back and listen to some music!</h3>}
+          {this.state.token ? <div></div> : <h3 class='kick-back'>Kick back and enjoy some music during your visit!</h3>}
           {!this.state.token && (<div className='login-btn'><a
               className="login"
               href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
                 "%20"
-              )}&response_type=token&show_dialog=true`}
+              )}&response_type=token&show_dialog=false`}
             >
               
               <FontAwesomeIcon className='icon' icon={faSpotify}/> Login to Spotify
@@ -132,14 +145,17 @@ class App extends Component {
           )}
           {this.state.no_data && (
             <p>
-              You need to be playing a song on Spotify, for something to appear here.
+              You need to be playing a song on Spotify for something to appear here.
             </p>
           )}
           </div>
-          <Repos repos={this.state.repos}/>
-        </div>
+          {this.state.img ? <Bio img={this.state.img}/> : <h2>Loading...</h2>}
+            <div>
+              <Repos repos={this.state.repos}/>
+            </div>
+          </div>
         <div className='main'>
-          <Bio />
+          <Projects />
         </div>
       </div>
     </Fragment>
