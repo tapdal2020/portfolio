@@ -8,6 +8,7 @@ import hash from "./components/hash";
 import Player from "./components/Player";
 import Repos from "./components/Repos";
 import Bio from "./components/Bio";
+import Quote from "./components/Quote";
 import * as $ from 'jquery';
 import Projects from './components/Projects';
 
@@ -156,6 +157,7 @@ class App extends Component {
           </div>
         <div className='main'>
           <Projects />
+          <Quote />
         </div>
       </div>
     </Fragment>

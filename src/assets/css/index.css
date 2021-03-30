@@ -5,7 +5,7 @@
 }
 
 div {
-  transition: all 0.5s linear;
+  /* transition: all 0.5s linear; */
 }
 
 * {
@@ -157,7 +157,7 @@ code {
 }
 
 .github {
-  margin-top: 20px;
+  margin-top: 32px;
   width: 100%;
   background-color: #181818;
   color: white;
@@ -296,4 +296,31 @@ code {
 
 .arrows {
   text-align: center;
+}
+
+.quotes {
+  background-color: #181818;
+  height: 23.5em;
+  border-radius: 10px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+  color: white;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.new {
+  height: 50px;
+  width: 160px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 5px;
+  color: #181818;
+  outline: none;
+}
+
+.quote {
+  margin: 20px;
 }
