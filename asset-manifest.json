@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/tapdal2020/portfolio/static/css/main.3c222c40.chunk.css",
-    "main.js": "/tapdal2020/portfolio/static/js/main.b8495038.chunk.js",
-    "main.js.map": "/tapdal2020/portfolio/static/js/main.b8495038.chunk.js.map",
+    "main.css": "/tapdal2020/portfolio/static/css/main.b7400544.chunk.css",
+    "main.js": "/tapdal2020/portfolio/static/js/main.bff043ad.chunk.js",
+    "main.js.map": "/tapdal2020/portfolio/static/js/main.bff043ad.chunk.js.map",
     "runtime-main.js": "/tapdal2020/portfolio/static/js/runtime-main.2d29ddb2.js",
     "runtime-main.js.map": "/tapdal2020/portfolio/static/js/runtime-main.2d29ddb2.js.map",
-    "static/js/2.1e461cbf.chunk.js": "/tapdal2020/portfolio/static/js/2.1e461cbf.chunk.js",
-    "static/js/2.1e461cbf.chunk.js.map": "/tapdal2020/portfolio/static/js/2.1e461cbf.chunk.js.map",
+    "static/js/2.ee432c5d.chunk.js": "/tapdal2020/portfolio/static/js/2.ee432c5d.chunk.js",
+    "static/js/2.ee432c5d.chunk.js.map": "/tapdal2020/portfolio/static/js/2.ee432c5d.chunk.js.map",
     "static/js/3.9d17473b.chunk.js": "/tapdal2020/portfolio/static/js/3.9d17473b.chunk.js",
     "static/js/3.9d17473b.chunk.js.map": "/tapdal2020/portfolio/static/js/3.9d17473b.chunk.js.map",
     "index.html": "/tapdal2020/portfolio/index.html",
-    "static/css/main.3c222c40.chunk.css.map": "/tapdal2020/portfolio/static/css/main.3c222c40.chunk.css.map",
-    "static/js/2.1e461cbf.chunk.js.LICENSE.txt": "/tapdal2020/portfolio/static/js/2.1e461cbf.chunk.js.LICENSE.txt",
+    "static/css/main.b7400544.chunk.css.map": "/tapdal2020/portfolio/static/css/main.b7400544.chunk.css.map",
+    "static/js/2.ee432c5d.chunk.js.LICENSE.txt": "/tapdal2020/portfolio/static/js/2.ee432c5d.chunk.js.LICENSE.txt",
     "static/media/ResumeTaylor2021.6752102a.pdf": "/tapdal2020/portfolio/static/media/ResumeTaylor2021.6752102a.pdf",
     "static/media/index.css": "/tapdal2020/portfolio/static/media/RobotoMono-VariableFont_wght.2ccde177.ttf",
     "static/media/flight-dash.40f3a869.png": "/tapdal2020/portfolio/static/media/flight-dash.40f3a869.png",
@@ -22,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2d29ddb2.js",
-    "static/js/2.1e461cbf.chunk.js",
-    "static/css/main.3c222c40.chunk.css",
-    "static/js/main.b8495038.chunk.js"
+    "static/js/2.ee432c5d.chunk.js",
+    "static/css/main.b7400544.chunk.css",
+    "static/js/main.bff043ad.chunk.js"
   ]
 }
