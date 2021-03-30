@@ -274,8 +274,8 @@ code {
 }
 
 .disabled {
-  background-color: rgba(160, 160, 160, 0.7) !important;
-  color: rgb(120, 120, 120);
+  background-color: rgba(160, 160, 160, 0.7);
+  color: rgba(50, 50, 50, 0.5);
   height: 50px;
   width: 160px;
   margin-right: 10px;
