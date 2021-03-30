@@ -24,7 +24,7 @@ const SafetyGearDetection = () => {
     }
 
     return (
-        <div className='project'>
+        <div>
             <div className='header'>
                 <h2>Safety Gear Detection</h2>
                 <h3>Senior Captstone Project</h3>
@@ -36,8 +36,8 @@ const SafetyGearDetection = () => {
                     premade and self-collected data, and utilized a "You Only Look Once" (YOLO) algorithm to perform object deteciton in real time.</p>
                 <img src={images[index]} alt='pic' />
                 <div class='arrows'>
-                    <button onClick={e=>handlePrev(e)}>{index === 0 ? <div></div> : <FontAwesomeIcon class='icon' icon={faArrowLeft} />}</button>
-                    <button onClick={e=>handleNext(e)}>{index === images.length-1 ? <div></div> : <FontAwesomeIcon class='icon' icon={faArrowRight} />}</button>
+                    <button onClick={e=>handlePrev(e)}>{index === 0 ?  <FontAwesomeIcon class='invisible' icon={faArrowLeft} />: <FontAwesomeIcon class='icon' icon={faArrowLeft} />}</button>
+                    <button onClick={e=>handleNext(e)}>{index === images.length-1 ? <FontAwesomeIcon class='invisible' icon={faArrowRight}/>  : <FontAwesomeIcon class='icon' icon={faArrowRight} />}</button>
                 </div>
             </div>
         </div>

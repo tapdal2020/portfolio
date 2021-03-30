@@ -25,7 +25,7 @@ const Quote = () => {
         <div className='quotes'>
             <div className='quote'>
                 <h3>{quote.content}</h3>
-                <h5>-{quote.author}</h5>
+                <h4>-{quote.author}</h4>
             </div>
             <button className='new' onClick={e=> handleClick(e)}>New Quote</button>
         </div>

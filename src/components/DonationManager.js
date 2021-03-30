@@ -1,8 +1,10 @@
 import React from 'react'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faArrowLeft, faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
 const Project = () => {
     return (
-        <div className='project'>
+        <div>
             <div className='header'>
                 <h2>Donation Manager</h2>
                 <h3>Brazos Valley Jazz Society</h3>
@@ -12,6 +14,10 @@ const Project = () => {
                     the Brazos Valley Jazz Society, and developed a SaaS solution to act as their donation management system powered
                     by Ruby on Rails, mySQL, and deployed using Heroku.</p>
                 <iframe className='yt-player' src="https://www.youtube.com/embed/UTZUZB-R-ew" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class='arrows'>
+                    <button><FontAwesomeIcon class='null' icon={faArrowLeft} /></button>
+                    <button><FontAwesomeIcon class='null' icon={faArrowRight} /></button>
+                </div>
             </div>
         </div>
     )

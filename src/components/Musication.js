@@ -23,7 +23,7 @@ const Musication = () => {
     }
 
     return (
-       <div className='project'>
+       <div>
             <div className='header'>
                 <h2>Musication</h2>
                 <h3>Human-Computer Interaction</h3>
@@ -36,8 +36,8 @@ const Musication = () => {
                     and to that place.</p>
                 <img src={images[index]} alt='pic' />
                  <div class='arrows'>
-                    <button onClick={e=>handlePrev(e)}>{index === 0 ? <div></div> : <FontAwesomeIcon class='icon' icon={faArrowLeft} />}</button>
-                    <button onClick={e=>handleNext(e)}>{index === images.length-1 ? <div></div> : <FontAwesomeIcon class='icon' icon={faArrowRight} />}</button>
+                    <button onClick={e=>handlePrev(e)}>{index === 0 ? <FontAwesomeIcon class='invisible' icon={faArrowLeft} /> : <FontAwesomeIcon class='icon' icon={faArrowLeft} />}</button>
+                    <button onClick={e=>handleNext(e)}>{index === images.length-1 ? <FontAwesomeIcon class='invisible' icon={faArrowRight} /> : <FontAwesomeIcon class='icon' icon={faArrowRight} />}</button>
                 </div>
             </div>
         </div>
