@@ -36,8 +36,8 @@ const Musication = () => {
                     and to that place.</p>
                 <img src={images[index]} alt='pic' />
                  <div class='arrows'>
-                    <button onClick={e=>handlePrev(e)}><FontAwesomeIcon class='icon' icon={faArrowLeft} /></button>
-                    <button onClick={e=>handleNext(e)}><FontAwesomeIcon class='icon' icon={faArrowRight} /></button>
+                    <button onClick={e=>handlePrev(e)}>{index === 0 ? <div></div> : <FontAwesomeIcon class='icon' icon={faArrowLeft} />}</button>
+                    <button onClick={e=>handleNext(e)}>{index === images.length-1 ? <div></div> : <FontAwesomeIcon class='icon' icon={faArrowRight} />}</button>
                 </div>
             </div>
         </div>

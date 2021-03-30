@@ -203,7 +203,7 @@ code {
 }
 
 .yt-player {
-  height: 30em;
+  height: 42em;
   width: 100%;
 }
 
@@ -215,6 +215,7 @@ code {
 
 .content img {
   width: 100%;
+  height: 37em;
 }
 
 .content button {
@@ -253,6 +254,7 @@ code {
   justify-content: left;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.5) 5px 5px;
+  height: 58.5em;
 }
 
 .btn {
@@ -264,7 +266,29 @@ code {
   color: white;
 }
 
+.btn :hover {
+  background-color: white;
+  color: #181818;
+}
+
 .btn .icon {
+  height: 10px;
+  width: 10px;
+  margin: 0;
+}
+
+.disabled {
+  background-color: rgba(160, 160, 160, 0.7) !important;
+  color: rgb(120, 120, 120);
+  height: 50px;
+  width: 160px;
+  margin: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.icon-dis {
   height: 10px;
   width: 10px;
   margin: 0;
