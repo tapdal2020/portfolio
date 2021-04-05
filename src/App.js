@@ -126,6 +126,16 @@ class App extends Component {
           <h1>Howdy! My name is Taylor Williamson and welcome to my portfolio!</h1>
       </div>
       <div className="App">
+
+        <div className="side">
+          <div className='sidebar'>
+            <button>Music</button>
+            <button>Bio</button>
+            <button>Repositories</button>
+            <button>Projects</button>
+          </div>
+        </div>
+        <div className='main'>
           <section className='spotify'>
           {this.state.token ? <div></div> : <h3 class='kick-back'>Kick back and enjoy some music during your visit!</h3>}
           {!this.state.token && (<div className='login-btn'><a
@@ -153,13 +163,14 @@ class App extends Component {
             </p>
           )}
           </section>
+          <section className='quotes'>
+            <Quote />
+          </section>
           {this.state.img ? <Bio img={this.state.img}/> : <h2>Loading...</h2>}
-            <div>
-              <Repos repos={this.state.repos}/>
-            </div>
+          <Repos repos={this.state.repos}/>
           <Projects />
-          <Quote />
         </div>
+      </div>
     </Fragment>
   );
   }

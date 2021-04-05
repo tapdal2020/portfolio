@@ -22,7 +22,7 @@ const Bio = ({img}) => {
                     utilizing the MERN (MongoDB, Express, React, Node.js) stack, SQL, and JavaScript/TypeScript.</p>
                 <p>I am constantly learning and gathering new knowledge as I am striving to 
                     become a more efficient, effective, and well-rounded developer. </p>
-                <Socials />
+                {/* <Socials /> */}
             </div>
         </section>
     )
