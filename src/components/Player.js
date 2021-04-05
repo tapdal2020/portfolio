@@ -26,7 +26,7 @@ const Player = props => {
                         {props.item.artists[0].name}
                     </div>
                     <div className='play-pause'>
-                            {props.is_playing ? <FontAwesomeIcon icon={faPause} />: <FontAwesomeIcon icon={faPlay} />}
+                        {props.is_playing ? <FontAwesomeIcon icon={faPause} />: <FontAwesomeIcon icon={faPlay} />}
                     </div>
                     <div className="progress">
                         <div className="progress__bar" style={progressBarStyles} />

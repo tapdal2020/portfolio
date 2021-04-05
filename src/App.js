@@ -47,6 +47,7 @@ class App extends Component {
         token: _token
       });
       this.getCurrentlyPlaying(_token);
+      console.log(_token);
     }
 
     // set interval for polling every 5 seconds
@@ -68,7 +69,9 @@ class App extends Component {
     });
   }
   
-    
+  handlePlay = e =>{
+    this.setState({is_playing: !this.state.is_playing});
+  }
 
   componentWillUnmount() {
     // clear the interval to save resources
@@ -130,7 +133,7 @@ class App extends Component {
               className="login"
               href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
                 "%20"
-              )}&response_type=token&show_dialog=false`}
+              )}&response_type=token&show_dialog=true`}
             >
               
               <FontAwesomeIcon className='icon' icon={faSpotify}/> Login to Spotify
@@ -142,6 +145,7 @@ class App extends Component {
               item={this.state.item}
               is_playing={this.state.is_playing}
               progress_ms={this.state.progress_ms}
+              //callback={this.handlePlay}
             />
           )}
           {this.state.no_data && (
