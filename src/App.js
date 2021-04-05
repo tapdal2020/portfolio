@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faSpotify } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faFile, faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faFile, faAddressCard, faProjectDiagram, faMusic } from '@fortawesome/free-solid-svg-icons';
 import { authEndpoint, clientId, redirectUri, scopes } from "./components/config";
 import resume from './assets/files/ResumeTaylor2021.pdf';
 import hash from "./components/hash";
@@ -129,10 +129,10 @@ class App extends Component {
 
         <div className="side">
           <div className='sidebar'>
-            <button>Music</button>
-            <button>Bio</button>
-            <button>Repositories</button>
-            <button>Projects</button>
+            <button name='music'><FontAwesomeIcon className='icon' icon={faMusic} />Music</button>
+            <button name='bio'><FontAwesomeIcon className='icon' icon={faAddressCard} />Bio</button>
+            <button name='repos'><FontAwesomeIcon className='icon' icon={faGithub} />Repositories</button>
+            <button name='projects'><FontAwesomeIcon className='icon' icon={faProjectDiagram} />Projects</button>
           </div>
         </div>
         <div className='main'>
@@ -142,7 +142,7 @@ class App extends Component {
               className="login"
               href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
                 "%20"
-              )}&response_type=token&show_dialog=true`}
+              )}&response_type=token&show_dialog=false`}
             >
               
               <FontAwesomeIcon className='icon' icon={faSpotify}/> Login to Spotify
