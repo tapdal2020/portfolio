@@ -27,11 +27,11 @@ const handleNext = e => {
     }
 }
         return (
-            <div className='project'>
+            <section className='project'>
                 {projects[index]}
                 {index===0 ? <button onClick={e=>handlePrev(e)} className='disabled'><FontAwesomeIcon class='icon-dis' icon={faArrowLeft} />Previous Project</button> : <button onClick={e=>handlePrev(e)} className='btn'><FontAwesomeIcon class='icon' icon={faArrowLeft} />Previous Project</button>}
                 {index===projects.length-1 ? <button onClick={e=>handleNext(e)} className='disabled'>Next Project<FontAwesomeIcon class='icon-dis' icon={faArrowRight} /></button> : <button onClick={e=>handleNext(e)} className='btn'>Next Project<FontAwesomeIcon class='icon' icon={faArrowRight} /></button>}
-            </div>
+            </section>
         )
 }
 

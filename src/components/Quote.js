@@ -14,21 +14,21 @@ const Quote = () => {
     }
 
     useEffect(async () => {
-        const res = await fetch('https://api.quotable.io/random');
+        const res = await fetch('https://quotes.rest/qod');
         const data = await res.json();
         setQuote({
-            content: data.content,
-            author: data.author
+            content: data.contents.quotes[0].quote,
+            author: data.contents.quotes[0].author
         })
     }, [newquote])
     return (
-        <div className='quotes'>
+        <section className='quotes'>
             <div className='quote'>
+                <h1>Quote of the Day:</h1>
                 <h3>{quote.content}</h3>
                 <h4>-{quote.author}</h4>
             </div>
-            <button className='new' onClick={e=> handleClick(e)}>New Quote</button>
-        </div>
+        </section>
     )
 }
 

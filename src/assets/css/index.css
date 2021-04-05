@@ -8,6 +8,11 @@
   font-family: RobotoMono, serif;
 }
 
+section {
+  margin: 10px 0;
+  width: 100%;
+}
+
 body {
   margin: 0;
   height: 100%;
@@ -15,12 +20,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
+  position: relative;
 }
 
 .App {
+  width: 50%;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 25%;
 }
-
 .title {
   text-align: center;
   width: 100%;
@@ -30,23 +40,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.sidebar {
-  /* background-color: red; */
-  margin: 30px;
-  width: 50%;
-  height: 100%;
-  text-align: center;
-  justify-content: center;
-}
-
-.main {
-  /* background-color: blue; */
-  margin: 30px;
-  width: 70%;
-  height: 100%;
-  text-align: center;
 }
 
 .navbar {
@@ -306,6 +299,10 @@ code {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+
+.quotes .h1 {
+  text-align: center;
 }
 
 .new {

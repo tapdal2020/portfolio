@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faSpotify } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faFile, faAddressCard } from '@fortawesome/free-solid-svg-icons';
 import { authEndpoint, clientId, redirectUri, scopes } from "./components/config";
 import resume from './assets/files/ResumeTaylor2021.pdf';
 import hash from "./components/hash";
@@ -126,8 +126,7 @@ class App extends Component {
           <h1>Howdy! My name is Taylor Williamson and welcome to my portfolio!</h1>
       </div>
       <div className="App">
-        <div className="sidebar">
-          <div className='spotify'>
+          <section className='spotify'>
           {this.state.token ? <div></div> : <h3 class='kick-back'>Kick back and enjoy some music during your visit!</h3>}
           {!this.state.token && (<div className='login-btn'><a
               className="login"
@@ -153,17 +152,14 @@ class App extends Component {
               You need to be playing a song on Spotify for something to appear here.
             </p>
           )}
-          </div>
+          </section>
           {this.state.img ? <Bio img={this.state.img}/> : <h2>Loading...</h2>}
             <div>
               <Repos repos={this.state.repos}/>
             </div>
-          </div>
-        <div className='main'>
           <Projects />
           <Quote />
         </div>
-      </div>
     </Fragment>
   );
   }

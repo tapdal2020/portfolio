@@ -3,7 +3,7 @@ import Socials from './Socials';
 
 const Bio = ({img}) => {
     return (
-        <div className='bio'>
+        <section className='bio'>
             <div className='avatar'>
                 <img src={img} alt='Taylor Williamson' />
             </div>
@@ -24,7 +24,7 @@ const Bio = ({img}) => {
                     become a more efficient, effective, and well-rounded developer. </p>
                 <Socials />
             </div>
-        </div>
+        </section>
     )
 }
 
