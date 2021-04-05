@@ -49,6 +49,7 @@ body {
 .sidebar {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 .side button {
@@ -68,6 +69,7 @@ body {
 .title {
   text-align: center;
   width: 100%;
+  margin-top: 100px;
   /* background-color: black; */
 }
 
@@ -82,8 +84,8 @@ code {
   background-color: #e0e0e0;
   align-items: center;
   position: fixed;
+  top: 0;
   width: 100%;
-  margin-top: -22px;
 }
 
 .navbar h2 {
