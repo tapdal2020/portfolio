@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.f2f43ff8.chunk.css",
-    "main.js": "/portfolio/static/js/main.fc8d095b.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.fc8d095b.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.e5de8813.chunk.css",
+    "main.js": "/portfolio/static/js/main.26c6ba76.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.26c6ba76.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.1ba38101.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.1ba38101.js.map",
     "static/js/2.ee432c5d.chunk.js": "/portfolio/static/js/2.ee432c5d.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.9d17473b.chunk.js": "/portfolio/static/js/3.9d17473b.chunk.js",
     "static/js/3.9d17473b.chunk.js.map": "/portfolio/static/js/3.9d17473b.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.f2f43ff8.chunk.css.map": "/portfolio/static/css/main.f2f43ff8.chunk.css.map",
+    "static/css/main.e5de8813.chunk.css.map": "/portfolio/static/css/main.e5de8813.chunk.css.map",
     "static/js/2.ee432c5d.chunk.js.LICENSE.txt": "/portfolio/static/js/2.ee432c5d.chunk.js.LICENSE.txt",
     "static/media/ResumeTaylor2021.c1a534ee.pdf": "/portfolio/static/media/ResumeTaylor2021.c1a534ee.pdf",
     "static/media/index.css": "/portfolio/static/media/RobotoMono-VariableFont_wght.2ccde177.ttf",
@@ -23,7 +23,7 @@
   "entrypoints": [
     "static/js/runtime-main.1ba38101.js",
     "static/js/2.ee432c5d.chunk.js",
-    "static/css/main.f2f43ff8.chunk.css",
-    "static/js/main.fc8d095b.chunk.js"
+    "static/css/main.e5de8813.chunk.css",
+    "static/js/main.26c6ba76.chunk.js"
   ]
 }
