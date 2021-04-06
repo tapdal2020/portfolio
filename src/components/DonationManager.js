@@ -15,8 +15,8 @@ const Project = () => {
                     by Ruby on Rails, mySQL, and deployed using Heroku.</p>
                 <iframe className='yt-player' src="https://www.youtube.com/embed/UTZUZB-R-ew" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class='arrows'>
-                    <button><FontAwesomeIcon class='null' icon={faArrowLeft} /></button>
-                    <button><FontAwesomeIcon class='null' icon={faArrowRight} /></button>
+                    <button><FontAwesomeIcon class='invisible' icon={faArrowLeft} /></button>
+                    <button><FontAwesomeIcon class='invisible' icon={faArrowRight} /></button>
                 </div>
             </div>
         </div>

@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin, faSpotify } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faFile, faAddressCard, faProjectDiagram, faMusic } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons';
 import { authEndpoint, clientId, redirectUri, scopes } from "./components/config";
 import resume from './assets/files/ResumeTaylor2021.pdf';
 import hash from "./components/hash";
@@ -9,8 +9,10 @@ import Player from "./components/Player";
 import Repos from "./components/Repos";
 import Bio from "./components/Bio";
 import Quote from "./components/Quote";
+import Navigation from "./components/Navigation";
+import Projects from "./components/Projects";
 import * as $ from 'jquery';
-import Projects from './components/Projects';
+
 
 class App extends Component {
 
@@ -121,22 +123,17 @@ class App extends Component {
         <a className='menu-item' href='http://linkedin.com/in/taylor-williamson-2020'><FontAwesomeIcon className='icon' icon={faLinkedin} />LinkedIn</a>
         <a className='menu-item' href={resume} ><FontAwesomeIcon className='icon' icon={faFile} />Resume</a>
         <a className='menu-item' href='mailto:tawilliamson2020@gmail.com'><FontAwesomeIcon className='icon' icon={faEnvelope} />Email</a>
+        <div className='dropdown'>
+          <Navigation />
+        </div>
       </div>
       <div className='title'>
-          <h1>Howdy! My name is Taylor Williamson and welcome to my portfolio!</h1>
+        <h1>Howdy! My name is Taylor Williamson and welcome to my portfolio!</h1>
       </div>
       <div className="App">
-
-        <div className="side">
-          <div className='sidebar'>
-            <button name='music'><FontAwesomeIcon className='icon' icon={faMusic} />Music</button>
-            <button name='bio'><FontAwesomeIcon className='icon' icon={faAddressCard} />Bio</button>
-            <button name='repos'><FontAwesomeIcon className='icon' icon={faGithub} />Repositories</button>
-            <button name='projects'><FontAwesomeIcon className='icon' icon={faProjectDiagram} />Projects</button>
-          </div>
-        </div>
         <div className='main'>
-          <section className='spotify'>
+          <div className='two-by-one'>
+            <section className='spotify'>
           {this.state.token ? <div></div> : <h3 class='kick-back'>Kick back and enjoy some music during your visit!</h3>}
           {!this.state.token && (<div className='login-btn'><a
               className="login"
@@ -166,6 +163,8 @@ class App extends Component {
           <section className='quotes'>
             <Quote />
           </section>
+          </div>
+          
           {this.state.img ? <Bio img={this.state.img}/> : <h2>Loading...</h2>}
           <Repos repos={this.state.repos}/>
           <Projects />
