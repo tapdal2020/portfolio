@@ -18,10 +18,10 @@ const Quote = () => {
     return (
         <Fragment>
             <h1>Quote of the Day:</h1>
-            <div className='quote'>
+            <section className='quote'>
                 <h3>{quote.content}</h3>
                 <h4>-{quote.author}</h4>
-            </div>
+            </section>
         </Fragment>
     )
 }

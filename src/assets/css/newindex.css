@@ -1,3 +1,5 @@
+/* Global Styles */
+
 @font-face {
   font-family: "RobotoMono";
   src: local("RobotoMono"),
@@ -6,109 +8,125 @@
 
 * {
   font-family: RobotoMono, serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* General styles */
+section {
+  margin: 2em;
+  text-align: center;
+}
+
+/* Typography */
+
+.icon {
+  margin-right: 1em;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
 
 a {
-  color: white;
   text-decoration: none;
 }
 
 body {
-  margin: 0;
-}
-
-button {
-  border: none;
-  outline: none;
+  background: #ffffff;
+  color: #000000;
 }
 
 .App {
   display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-/* navbar styling */
-.navbar {
-  position: fixed;
-  display: flex;
-  top: 0;
-  height: 50px;
+  flex-direction: column;
   align-items: center;
-  background-color: #e0e0e0;
+}
+
+/* Layout */
+
+/* Navigation */
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+  background-color: black;
+  position: fixed;
+  top: 0;
   width: 100%;
-  margin: 0;
-  border-bottom: 1px solid rgba(160, 160, 160, 0.7);
 }
 
-.navbar h2 {
-  margin: 10px;
-}
-
-.menu-item {
-  text-decoration: none;
-  border-left: 1px solid rgba(160, 160, 160, 0.7);
-  padding: 0 20px;
-  color: #181818;
-}
-
-.dropdown {
-  display: none;
-}
-
-@media (max-width: 775px) {
-  .menu-item {
-    display: none;
-  }
-
-  .navbar > * {
-    flex-basis: 100%;
-  }
-
-  .dropdown {
-    display: inline;
-    text-align: right;
-    margin: 10px;
-    /* background-color: rgba(160, 160, 160, 0.7); */
-  }
-
-  .toggle {
-    background: #e0e0e0;
-  }
-}
-
-/* icon styling */
-.icon {
-  padding-right: 10px;
-}
-
-/* header styling */
-.title {
-  margin-top: 70px;
-  text-align: center;
-}
-
-/* section styling */
-
-section {
-  padding: 20px;
-  background-color: #181818;
-  border-radius: 10px;
-  box-shadow: 5px 5px rgba(0, 0, 0, 0.5);
+.nav-title {
   color: white;
-  margin: 10px;
-  width: 75vw;
+  margin: 1.5em;
+  font-size: 3vh;
 }
 
-/* spotify module styling */
-.spotify {
+.navlinks {
+  display: flex;
+  list-style: none;
+  width: 33vw;
+  justify-content: space-around;
+}
+
+.link a {
+  color: white;
+}
+
+/* Bio */
+
+.bio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12vh;
+}
+
+.title {
+  font-size: 1.7em;
+  margin-bottom: 1em;
+  max-width: 75%;
+  padding-left: 12.5%;
+}
+
+.blurb {
+  line-height: 2em;
   text-align: center;
+  margin: 1em;
+}
+
+.about {
+  min-width: 100%;
+}
+
+.avatar img {
+  border: 10px solid #000000;
+  min-width: 25vw;
+  max-width: 50vw;
+}
+
+@media (max-width: 1000px) {
+  .bio {
+    flex-direction: column;
+  }
+}
+
+/* Modules */
+.modules {
+  background: rgba(10, 10, 10, 0.95);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.modules > * {
+  flex-basis: 100%;
 }
 
 .login {
-  text-decoration: none;
+  height: 5vh;
+  width: 8vw;
   background-color: #1ed760;
   color: white;
   padding: 10px;
@@ -116,48 +134,9 @@ section {
   box-shadow: white 3px 3px;
 }
 
-.login:hover {
-  background-color: white;
-  color: #1ed760;
-  box-shadow: #1ed760 3px 3px;
-  transition: 0.5s ease;
+.kick-back {
+  margin: 2em;
 }
-
-.login:active {
-  color: #012;
-  transform: translateY(10px);
-  box-shadow: #012 3px 3px;
-}
-
-/* Bio style */
-
-.avatar {
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.avatar img {
-  border-radius: 50%;
-  width: 50%;
-  box-shadow: 5px 5px black;
-}
-
-.two-by-one {
-  display: flex;
-  width: 78vw;
-  margin: 0;
-  padding: 0;
-}
-
-.two-by-one > * {
-  flex-grow: 1;
-}
-
-/* Repository style */
 
 .repos {
   display: flex;
@@ -165,31 +144,49 @@ section {
 }
 
 .repo {
-  background-color: white;
-  color: #181818;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 10px;
+  background: white;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  margin: 0.5em;
+}
+.repo a,
+.repo .icon {
+  color: black;
 }
 
-.repo a {
-  color: #012;
+/* Projects */
+
+.project-content {
+  display: flex;
 }
 
-.github h2 {
-  text-align: center;
+.yt-player {
+  width: 50vw;
+  height: 60vh;
+  margin: 2em;
 }
 
-/* Project style */
+.content img {
+  height: 60vh;
+  max-width: 50vw;
+  min-width: 50vw;
+  margin: 2em;
+}
 
-.project {
-  justify-content: left;
+.header p,
+h2,
+h3 {
+  line-height: 2em;
+}
+
+.header {
+  margin-top: 3em;
 }
 
 .btn {
-  height: 50px;
-  width: 160px;
-  margin: 10px;
+  height: 4.5em;
+  width: 15em;
+  margin-right: 10px;
   background-color: white;
   border-radius: 5px;
   color: #181818;
@@ -200,77 +197,75 @@ section {
   color: #181818;
 }
 
-.btn .icon {
-  height: 10px;
-  width: 10px;
-  margin: 0;
-}
-
-.disabled {
-  background-color: rgba(160, 160, 160, 0.7);
-  color: rgba(50, 50, 50, 0.5);
-  height: 50px;
-  width: 160px;
-  margin: 10px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-}
-
 .icon-dis {
   height: 10px;
   width: 10px;
   margin: 0;
 }
 
-.arrows {
-  text-align: center;
+.btn .icon {
+  height: 10px;
+  width: 10px;
   margin: 0;
-}
-
-.content {
-  padding-left: 30px;
-  padding-right: 30px;
-  text-align: center;
-}
-
-.content img {
-  width: 80%;
-  height: 50vh;
-}
-
-.yt-player {
-  height: 50vh;
-  width: 80%;
-}
-
-.arrows {
-  display: flex;
-  justify-content: center;
-  /* background-color: white; */
-  width: 100%;
-}
-
-.arrows button {
-  height: 45px;
-  width: 45px;
-  background: #181818;
-  color: white;
-  margin: 10px;
-}
-
-.arrows .invisible {
-  color: #181818;
-}
-
-.header {
-  text-align: left;
-  padding-left: 30px;
-  padding-right: 30px;
 }
 
 .buttons {
   display: flex;
   justify-content: center;
-  /* background-color: white; */
+}
+
+.invisible {
+  color: white;
+  height: 2em;
+  width: 2em;
+}
+
+.disabled {
+  background-color: rgba(160, 160, 160, 0.7);
+  color: rgba(50, 50, 50, 0.5);
+  height: 4.5em;
+  width: 15em;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.arrows {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.btn-invisible {
+  height: 4.5em;
+  width: 15em;
+  margin-right: 10px;
+  background: white;
+  border-radius: 5px;
+  color: #181818;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 1150px) {
+  .modules {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .navlinks {
+    display: none;
+  }
+
+  .project-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .yt-player {
+    width: 75vw;
+  }
 }

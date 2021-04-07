@@ -1,16 +1,12 @@
 import React, {Component, Fragment} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faSpotify } from "@fortawesome/free-brands-svg-icons";
-import { faBars, faEnvelope, faFile } from '@fortawesome/free-solid-svg-icons';
-import { authEndpoint, clientId, redirectUri, scopes } from "./components/config";
-import resume from './assets/files/ResumeTaylor2021.pdf';
+
 import hash from "./components/hash";
-import Player from "./components/Player";
+import Spotify from "./components/Spotify";
 import Repos from "./components/Repos";
 import Bio from "./components/Bio";
-import Quote from "./components/Quote";
-import Navigation from "./components/Navigation";
+import About from "./components/About";
 import Projects from "./components/Projects";
+import Navbar from './components/Navbar';
 import * as $ from 'jquery';
 
 
@@ -117,58 +113,22 @@ class App extends Component {
   render(){
     return (
     <Fragment>
-      <div className='navbar'>
-        <h2>Taylor Williamson</h2>
-        <a className='menu-item' href='https://github.com/tapdal2020'><FontAwesomeIcon className='icon' icon={faGithub}/>Github</a>
-        <a className='menu-item' href='http://linkedin.com/in/taylor-williamson-2020'><FontAwesomeIcon className='icon' icon={faLinkedin} />LinkedIn</a>
-        <a className='menu-item' href={resume} ><FontAwesomeIcon className='icon' icon={faFile} />Resume</a>
-        <a className='menu-item' href='mailto:tawilliamson2020@gmail.com'><FontAwesomeIcon className='icon' icon={faEnvelope} />Email</a>
-        <div className='dropdown'>
-          <Navigation />
-        </div>
-      </div>
-      <div className='title'>
-        <h1>Howdy! My name is Taylor Williamson and welcome to my portfolio!</h1>
-      </div>
+      <Navbar />
       <div className="App">
-        <div className='main'>
-          <div className='two-by-one'>
-            <section className='spotify'>
-          {this.state.token ? <div></div> : <h3 class='kick-back'>Kick back and enjoy some music during your visit!</h3>}
-          {!this.state.token && (<div className='login-btn'><a
-              className="login"
-              href={`${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
-                "%20"
-              )}&response_type=token&show_dialog=false`}
-            >
-              
-              <FontAwesomeIcon className='icon' icon={faSpotify}/> Login to Spotify
-            </a> </div>
-            )}
-            
-          {this.state.token && !this.state.no_data && (
-            <Player
-              item={this.state.item}
-              is_playing={this.state.is_playing}
-              progress_ms={this.state.progress_ms}
-              //callback={this.handlePlay}
-            />
-          )}
-          {this.state.no_data && (
-            <p>
-              You need to be playing a song on Spotify for something to appear here.
-            </p>
-          )}
-          </section>
-          <section className='quotes'>
-            <Quote />
-          </section>
-          </div>
-          
+        <div className='intro'>
           {this.state.img ? <Bio img={this.state.img}/> : <h2>Loading...</h2>}
-          <Repos repos={this.state.repos}/>
-          <Projects />
         </div>
+        <div>
+          <About />
+        </div>
+        <div className='modules'>
+          <Spotify state={this.state} />
+          <Repos repos={this.state.repos}/>
+        </div>
+        <section className='showcase'>
+          {/* <h1>Project Showcase</h1> */}
+          <Projects />
+        </section>  
       </div>
     </Fragment>
   );
