@@ -17,8 +17,8 @@ const Quote = () => {
     }, [])
     return (
         <Fragment>
-            <h1>Quote of the Day:</h1>
             <section className='quote'>
+                <h1>Quote of the Day:</h1>
                 <h3>{quote.content}</h3>
                 <h4>-{quote.author}</h4>
             </section>
