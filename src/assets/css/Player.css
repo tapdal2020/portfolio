@@ -57,3 +57,13 @@
   height: 100%;
   width: 100%;
 }
+
+@media (max-width: 500px) {
+  .now-playing__img {
+    width: 45%;
+  }
+
+  .now-playing__side {
+    width: 55%;
+  }
+}

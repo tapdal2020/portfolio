@@ -3,7 +3,7 @@ import React from 'react'
 const About = () => {
     return (
         <section className='about'>
-            <h1>About Me</h1>
+            <h2>About Me</h2>
                 <div className='blurb'>
                     <p> My name is Taylor Williamson and I am a recent Computer Science and 
                         Engineering graduate from Texas A&M University actively seeking a 
